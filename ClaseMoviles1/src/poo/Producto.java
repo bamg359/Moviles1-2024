@@ -8,12 +8,24 @@ public class Producto {
 
     // Atributos
 
-    int id;
-    String name;
-    double price;
-    String category;
+    private int id;
+    protected String name;
+    private double price;
+    private String category;
 
     String[][] products = new String[2][3];
+
+    public Producto(int id, String name, double price, String category) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.category = category;
+    }
+
+    public Producto(){
+
+
+    }
 
     //Metodos
 

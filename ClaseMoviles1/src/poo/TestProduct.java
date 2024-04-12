@@ -10,8 +10,20 @@ public class TestProduct {
 
         //System.out.println(producto.name);
 
-        producto.createProduct();
-        producto.selectProduct();
+        //producto.createProduct();
+        //producto.selectProduct();
+        /*
+        String name2 = "Cualquier nombre";
+
+        producto.name = "pepito";
+
+        System.out.println(producto.name);
+
+        producto.name = name2;
+
+        System.out.println(producto.name);*/
+
+        System.out.println(producto.name);
 
 
     }
