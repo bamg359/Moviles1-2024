@@ -11,6 +11,7 @@ public class TestProduct {
         //System.out.println(producto.name);
 
         producto.createProduct();
+        producto.selectProduct();
 
 
     }
