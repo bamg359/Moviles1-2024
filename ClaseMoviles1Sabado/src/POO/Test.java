@@ -1,18 +1,20 @@
 package POO;
 
-public class Main {
+public class Test {
+
 
     public static void main(String[] args) {
 
-        Empleado empleado = new Empleado();
+
         Producto producto = new Producto();
         Cliente cliente = new Cliente();
 
-        cliente.producto = producto;
 
-        //empleado.crearPersona();
-        //empleado.consultarPersona();
+
+
+        cliente.producto = producto;
         producto.crearProducto();
+        producto.verProducto();
         cliente.crearPersona();
         cliente.consultarPersona();
 
