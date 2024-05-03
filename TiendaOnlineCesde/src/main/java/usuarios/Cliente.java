@@ -43,7 +43,13 @@ public class Cliente extends Usuario {
 
     @Override
     public void crearUsuario() {
+
         super.crearUsuario();
+        System.out.println("Tipo Cliente:");
+        tipoCliente = sc.nextLine();
+        System.out.println("Codigo Cliente:");
+        codCliente = sc.nextInt();
+
     }
 
     @Override
@@ -53,7 +59,22 @@ public class Cliente extends Usuario {
 
     @Override
     public void seleccionarUsuario() {
+
         super.seleccionarUsuario();
+
+        System.out.println("Tipo Cliente:" + tipoCliente);
+
+        System.out.println("Codigo Cliente:" + codCliente);
+
+    }
+
+    @Override
+    public void seleccionarUsuario(String nit, String rut) {
+        super.seleccionarUsuario(nit, rut);
+
+        System.out.println("Tipo Cliente:" + tipoCliente);
+
+        System.out.println("Codigo Cliente:" + codCliente);
     }
 
     @Override
