@@ -4,7 +4,7 @@ public class TestUsuario {
 
     public static void main(String[] args) {
 
-
+ /* Esta clase ya no puede ser implementada porque es abstracta
         Usuario usuario1 = new Usuario();
         Usuario usuario2 = new Usuario();
 
@@ -12,7 +12,7 @@ public class TestUsuario {
         usuario1.setCorreo("maria@mail.com");
 
         System.out.println(usuario1.getNombre());
-        System.out.println(usuario1.getCorreo());
+        System.out.println(usuario1.getCorreo());*/
 
     }
 }
