@@ -20,15 +20,37 @@ public class User {
     // Constructor de la clase
 
 
+    public User() {
+
+    }
+
+
+    public User(int id, String name, String lastName, String phone, String mail, String password){
+
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.mail = mail;
+        this.phone = phone;
+        this.password = password;
+    }
+
+    public User(String mail, String password){
+
+        this.mail = mail;
+
+        this.password = password;
+    }
+
+
+
     // Getter and Setter
 
     public int getId() {
         return id;
     }
 
-    public User() {
 
-    }
 
     public void setId(int id) {
 

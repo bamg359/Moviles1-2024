@@ -8,6 +8,10 @@ public class Product {
     private boolean state;
 
 
+
+    private int opc;
+
+
     public Product(){
 
     }
@@ -42,5 +46,13 @@ public class Product {
 
     public void setState(boolean state) {
         this.state = state;
+    }
+
+    public int getOpc() {
+        return opc;
+    }
+
+    public void setOpc(int opc) {
+        this.opc = opc;
     }
 }

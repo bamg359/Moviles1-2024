@@ -8,7 +8,15 @@ public class TestProductService {
 
         ProductService productService = new ProductService();
         Product product = new Product();
-        productService.createProduct(product);
+        //productService.createProduct(product);
+
+        productService.listingProducts();
+
+        //productService.deleteProduct();
+
+        productService.updateProduct(product);
+
+        productService.listingProducts();
 
     }
 }
