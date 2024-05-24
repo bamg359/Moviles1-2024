@@ -45,12 +45,33 @@ public class Cliente extends Usuario {
     public void crearUsuario() {
 
         super.crearUsuario();
-        System.out.println("Tipo Cliente:");
-        tipoCliente = sc.nextLine();
+        System.out.println("Selecione un Tipo Cliente 1. Persona Natural 2. Persona Jurica:");
+        int opc = sc.nextInt();
+        tipoCliente = seleccionarTipoCliente(opc);
         System.out.println("Codigo Cliente:");
         codCliente = sc.nextInt();
 
     }
+
+    public String seleccionarTipoCliente(int opc){
+
+        if(opc == 1){
+            String personaNatural = String.valueOf(TipoCliente.PERSONA_NATURAL);
+            return  personaNatural;
+        }else if(opc == 2 ){
+            String personaJuridica = String.valueOf(TipoCliente.PERSONA_JURIDICA);
+            return personaJuridica;
+        }else{
+            String mensaje = "Seleccione una opcion valida";
+            return mensaje;
+        }
+
+
+    }
+
+
+
+
 
     @Override
     public void actualizarUsuario() {

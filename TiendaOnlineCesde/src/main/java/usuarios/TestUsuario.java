@@ -14,5 +14,13 @@ public class TestUsuario {
         System.out.println(usuario1.getNombre());
         System.out.println(usuario1.getCorreo());*/
 
+
+
+        Cliente cliente = new Cliente();
+
+        cliente.crearUsuario();
+
+        cliente.seleccionarUsuario();
+
     }
 }

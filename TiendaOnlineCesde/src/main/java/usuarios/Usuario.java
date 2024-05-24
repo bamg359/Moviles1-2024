@@ -1,5 +1,7 @@
 package usuarios;
 
+import helpers.ValidaCliente;
+
 import java.util.Scanner;
 
 public abstract class Usuario implements UtilUsuario {
@@ -80,11 +82,24 @@ public abstract class Usuario implements UtilUsuario {
 
     public void crearUsuario(){
 
+
         System.out.println("Id");
-        id = sc.nextInt();
-        sc.nextLine();
+        String idStr = sc.nextLine();
+        if(ValidaCliente.validarId(idStr)){
+            int id = Integer.parseInt(idStr);
+            this.id = id;
+        }else{
+            System.out.println("Id debe contener valores alfa numericos");
+        }
+        ;
         System.out.println("Nombre:");
-        nombre = sc.nextLine();
+        String nombre = sc.nextLine();
+        if(ValidaCliente.validarNombre(nombre)){
+            this.nombre = nombre;
+        }else{
+            System.out.println("Nombre no cumple con las condiciones");
+        }
+
         System.out.println("Apellido:");
         apellido = sc.nextLine();
         System.out.println("Telefono");
