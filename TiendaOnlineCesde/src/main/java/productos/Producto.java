@@ -10,6 +10,8 @@ public class Producto {
 
     private int idProducto;
     private String nombreProducto;
+    private double costo;
+    private double margenGanancia;
     private double precio;
     private int cantidad;
     Categoria categoria;
@@ -20,9 +22,11 @@ public class Producto {
 
     }
 
-    public Producto(int idProducto, String nombreProducto, double precio, int cantidad, Categoria categoria) {
+    public Producto(int idProducto, String nombreProducto,  double costo, double margenGanancia, double precio, int cantidad, Categoria categoria) {
         this.idProducto = idProducto;
         this.nombreProducto = nombreProducto;
+        this.costo= costo;
+        this.margenGanancia = margenGanancia;
         this.precio = precio;
         this.cantidad = cantidad;
         this.categoria = categoria;
@@ -45,6 +49,23 @@ public class Producto {
 
     public void setNombreProducto(String nombreProducto) {
         this.nombreProducto = nombreProducto;
+    }
+
+
+    public double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
+
+    public double getMargenGanancia() {
+        return margenGanancia;
+    }
+
+    public void setMargenGanancia(double margenGanancia) {
+        this.margenGanancia = margenGanancia;
     }
 
     public double getPrecio() {
@@ -72,8 +93,12 @@ public class Producto {
         sc.nextLine();
         System.out.println("Nombre Producto: ");
         nombreProducto = sc.nextLine();
+        System.out.println("Costo");
+        costo = sc.nextDouble();
+        System.out.println("Margen de ganancia ");
+        margenGanancia = sc.nextDouble();
         System.out.println("Precio: ");
-        precio = sc.nextDouble();
+        precio = calcularPrecio(costo,margenGanancia);
         sc.nextLine();
         System.out.println("Cantidad: ");
         cantidad = sc.nextInt();
@@ -90,6 +115,14 @@ public class Producto {
         System.out.println("Cantidad: " + cantidad);
         String nombreCategoria = categoria.getNombreCategoria();
         System.out.println("Categoria:" + nombreCategoria);
+
+    }
+
+    public double calcularPrecio(double costoProducto, double margenGanancia){
+
+        double precio = costoProducto/(1-margenGanancia);
+
+        return precio;
 
     }
 

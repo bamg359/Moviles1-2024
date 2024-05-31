@@ -7,7 +7,7 @@ public class ValidaCliente {
 
 
     private static final String ID_REGEX = "^\\d+$";
-    private static final String NAME_REGEX = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+";
+    private static final String NAME_REGEX = "^[a-zA-Z\\s]+$";
 
 
     private static final Pattern idPattern = Pattern.compile(ID_REGEX);
