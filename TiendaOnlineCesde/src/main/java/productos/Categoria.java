@@ -45,15 +45,7 @@ public class Categoria {
     //4. Metodos Propios
 
 
-    public void crearCategoria(){
 
-        System.out.println("Id Categoria");
-        idCategoria = sc.nextInt();
-        sc.nextLine();
-        System.out.println("Nombre Categoria");
-        nombreCategoria = sc.nextLine();
-
-    }
 
 
     public void seleccionarCategoria(){

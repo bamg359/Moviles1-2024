@@ -8,6 +8,8 @@ public class TestProducto {
     public static void main(String[] args) {
         //Usuario usuario3 = new Usuario();
 
+        /*
+
         Categoria categoria = new Categoria();
         Cliente cliente = new Cliente();
         Producto producto = new Producto();
@@ -25,7 +27,7 @@ public class TestProducto {
         producto.crearProducto();
         producto.seleccionarProducto();
         compraProducto.registrarCompra();
-        compraProducto.imprimirCompra();
+        compraProducto.imprimirCompra();*/
 
 
     }
