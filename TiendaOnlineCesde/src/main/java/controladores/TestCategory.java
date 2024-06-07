@@ -14,7 +14,7 @@ public class TestCategory {
 
         categoryService.crearCategoria(category);
 
-
+        categoryService.selectCategory();
 
     }
 }

@@ -5,7 +5,7 @@ import model.Product;
 
 import java.util.Scanner;
 
-public class ProductService {
+public class ProductService implements ProductUtil{
 
     Scanner sc = new Scanner(System.in);
 

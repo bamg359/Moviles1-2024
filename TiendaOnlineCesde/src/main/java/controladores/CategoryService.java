@@ -24,7 +24,7 @@ public class CategoryService {
 
     public void selectCategory(){
 
-
+        CategoryDAO.selectCategoryDAO();
 
     }
 

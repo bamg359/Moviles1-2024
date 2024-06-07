@@ -37,7 +37,7 @@ public class CategoryDAO {
 
 
 
-    public void selectCategoryDAO(){
+    public static void selectCategoryDAO(){
 
         Conexion conexion = new Conexion();
 
@@ -46,6 +46,27 @@ public class CategoryDAO {
             PreparedStatement ps = null;
 
             ResultSet rs = null;
+
+            try{
+
+                String query = "SELECT * FROM category";
+
+                ps= connection.prepareStatement(query);
+
+                rs = ps.executeQuery();
+
+                while(rs.next()){
+
+                    System.out.println("Id:" + rs.getInt("id_category"));
+                    System.out.println("Nombre Categoria" + rs.getString("category_name"));
+
+                }
+
+
+            }catch(SQLException e){
+                System.out.println(e);
+                System.out.println("No se pudo recuperar registros");
+            }
 
 
         }catch (SQLException e){
